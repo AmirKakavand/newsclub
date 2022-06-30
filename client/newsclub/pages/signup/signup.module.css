@@ -1,0 +1,12 @@
+.container{
+    background-color: #eee;
+    border-radius: 0.5rem;
+}
+
+.stack {
+    margin: 1rem auto;
+}
+
+.input{
+    background-color: white;
+}

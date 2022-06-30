@@ -30,6 +30,7 @@ export default function Home() {
           colorScheme={"green"}
           width={{ sm: "50%", md: "40%" }}
           marginTop={"1rem"}
+          onClick={() => router.push("/signup")}
         >
           Sign up for free
         </Button>
@@ -47,6 +48,7 @@ export default function Home() {
         <Button
           colorScheme={"blackAlpha"}
           width={{ sm: "50%", md: "40%" }}
+          onClick={() => router.push("/login")}
         >
           Log in
         </Button>
