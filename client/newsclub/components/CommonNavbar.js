@@ -5,7 +5,7 @@ import {
   BreadcrumbLink,
   Box,
   Avatar,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
@@ -29,19 +29,34 @@ function CommonNavbar() {
         </BreadcrumbItem>
 
         <BreadcrumbItem color={"white"}>
-          {router.pathname === "/user" ? (
+          {router.pathname === "/user" && (
             <BreadcrumbLink
               onClick={() => router.push("/user/profile")}
               _hover={{ textDecoration: "none" }}
             >
               <Avatar name={"Amir Kakavand"} />
             </BreadcrumbLink>
-          ) : (
+          )}
+          {router.pathname === "/user/profile" && (
             <BreadcrumbLink
               onClick={() => router.push("/user")}
               _hover={{ textDecoration: "none" }}
             >
-              <Text color={"white"} fontSize={{ sm: "1.5rem", md: "2rem" }}>Back</Text>
+              <Text color={"white"} fontSize={{ sm: "1.5rem", md: "2rem" }}>
+                Back
+              </Text>
+            </BreadcrumbLink>
+          )}
+          {(router.pathname === "/news-club/post-new" ||
+            router.pathname === "/news-club/show-users" ||
+            router.pathname === "/news-club/show-requests") && (
+            <BreadcrumbLink
+              onClick={() => router.push("/news-club")}
+              _hover={{ textDecoration: "none" }}
+            >
+              <Text color={"white"} fontSize={{ sm: "1.5rem", md: "2rem" }}>
+                Back
+              </Text>
             </BreadcrumbLink>
           )}
         </BreadcrumbItem>
