@@ -48,7 +48,7 @@ export default function Home() {
         <Button
           colorScheme={"blackAlpha"}
           width={{ sm: "50%", md: "40%" }}
-          onClick={() => router.push("/user")} //FIXME this should direct to "/login"
+          onClick={() => router.push("/user")}
         >
           Log in
         </Button>

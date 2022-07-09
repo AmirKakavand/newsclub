@@ -17,7 +17,7 @@ import {
 
 function ShowRequests() {
   const [users, setUsers] = useState([
-    {
+  {
       id: 1,
       name: "John",
       lastname: "Doe",
@@ -50,7 +50,7 @@ function ShowRequests() {
       requestType: "update",
     },
   ])
-
+  
   useEffect(() => {
     alert("Changes applied successfully!");
   }, [users])

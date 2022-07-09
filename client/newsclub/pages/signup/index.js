@@ -11,8 +11,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 import styles from "./signup.module.css";
+import { useRouter } from "next/router";
 
 function Signup() {
+  const router = useRouter();
   return (
     <Box
       className={styles.container}
@@ -43,7 +45,10 @@ function Signup() {
         <InputGroup>
           <Input bgColor={"white"} type="email" placeholder="E-mail" />
         </InputGroup>
-        <Button colorScheme={"messenger"} onClick={() => {alert("We'll let you know!")}}>Submit</Button>
+        <Button colorScheme={"messenger"} onClick={() => {
+          alert("We'll let you know!")
+          router.push("/")
+          }}>Submit</Button>
       </Stack>
       {/* لیست اشتراک خبری و کد مشترک نیز نیاز است */}
     </Box>
